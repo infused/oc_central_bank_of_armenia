@@ -3,7 +3,6 @@
 require 'json'
 require 'mechanize'
 require 'turbotlib'
-require 'byebug'
 
 SOURCE_URL = 'https://www.cba.am/en/SitePages/fscfobanks.aspx'
 
