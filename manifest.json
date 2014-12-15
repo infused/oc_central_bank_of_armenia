@@ -1,0 +1,23 @@
+{
+  "bot_id": "central_bank_of_armenia",
+  "title": "Central Bank of Armenia",
+  "description": "Scape financial organizations for Central Bank of Armenia",
+  "language": "ruby",
+  "data_type": "primary data",
+  "identifying_fields": [
+    "company_name"
+  ],
+  "company_fields": {
+    "name": "company_name"
+  },
+  "files": [
+    "scraper.rb"
+  ],
+  "frequency": "monthly",
+  "publisher": {
+    "name": "Central Bank of Armenia",
+    "url": "https://www.cba.am/en/SitePages/fscfobanks.aspx",
+    "terms": "unknown",
+    "terms_url": "unknown"
+  }
+}
