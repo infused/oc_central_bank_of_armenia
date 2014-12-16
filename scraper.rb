@@ -16,7 +16,7 @@ page.search('.banks_list_cont .banks_list_desc').each do |bank|
     company_name: bank.search('a').first.text.strip,
     organization_head: parts[0].split('</b>').last,
     address: parts[1].split('</b>').last,
-    branch: parts[2].split('</b>').last,
+    branch: parts[2].split('</b>').last.gsub(/[^\d]/, ''),
     source_url: SOURCE_URL,
     sample_date: Time.now
   }
