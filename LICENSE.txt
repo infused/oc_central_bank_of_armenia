@@ -1,4 +1,4 @@
-Copyright (c) <date> <your name here>
+Copyright (c) 2014 Keith Morrison <keithm@infused.org>
 
 MIT License
 
