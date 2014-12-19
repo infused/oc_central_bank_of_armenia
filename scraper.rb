@@ -5,11 +5,11 @@ require 'mechanize'
 require 'turbotlib'
 
 urls = {
-  banks: 'https://www.cba.am/en/SitePages/fscfobanks.aspx',
-  credit_organizations: 'https://www.cba.am/en/SitePages/fscfocreditorganizations.aspx',
-  insurance_organizations: 'https://www.cba.am/en/SitePages/fscfoinsuranceorganizations.aspx',
-  insurance_brokers: 'https://www.cba.am/en/SitePages/fscfoinsurancebrokers.aspx',
-  lombards: 'https://www.cba.am/en/SitePages/fscfolombards.aspx',
+  'Bank' => 'https://www.cba.am/en/SitePages/fscfobanks.aspx',
+  'Credit Organization' => 'https://www.cba.am/en/SitePages/fscfocreditorganizations.aspx',
+  'Insurance Organization' => 'https://www.cba.am/en/SitePages/fscfoinsuranceorganizations.aspx',
+  'Insurance Broker' => 'https://www.cba.am/en/SitePages/fscfoinsurancebrokers.aspx',
+  'Lombard' => 'https://www.cba.am/en/SitePages/fscfolombards.aspx',
 }
 
 urls.each do |category, url|

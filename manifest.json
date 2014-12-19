@@ -13,7 +13,8 @@
     "name": "company_name"
   },
   "files": [
-    "scraper.rb"
+    "scraper.rb",
+    "licence_transformer.rb"
   ],
   "frequency": "monthly",
   "publisher": {
@@ -21,5 +22,10 @@
     "url": "https://www.cba.am/en/SitePages/fscfobanks.aspx",
     "terms": "unknown",
     "terms_url": "unknown"
-  }
+  },
+  "transformers": [{
+    "file": "licence_transformer.rb",
+    "data_type": "simple-licence",
+    "identifying_fields": ["company_name"]
+  }]
 }
