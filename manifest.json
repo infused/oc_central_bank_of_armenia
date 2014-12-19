@@ -2,6 +2,8 @@
   "bot_id": "central_bank_of_armenia",
   "title": "Central Bank of Armenia",
   "description": "Scape financial organizations for Central Bank of Armenia",
+  "author": "Keith Morrison <keithm@infused.org>",
+  "repository": "https://github.com/infused/oc_central_bank_of_armenia",
   "language": "ruby",
   "data_type": "primary data",
   "identifying_fields": [
