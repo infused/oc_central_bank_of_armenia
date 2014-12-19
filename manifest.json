@@ -5,6 +5,7 @@
   "author": "Keith Morrison <keithm@infused.org>",
   "repository": "https://github.com/infused/oc_central_bank_of_armenia",
   "language": "ruby",
+  "tags": ["bot", "Armenia", "world-finance-licences", "easy", "mapthebanks"],
   "data_type": "primary data",
   "identifying_fields": [
     "company_name"
