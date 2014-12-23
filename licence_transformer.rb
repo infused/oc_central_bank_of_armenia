@@ -8,7 +8,6 @@ STDIN.each_line do |line|
     company_jurisdiction: 'Armenia',
     source_url: raw['source_url'],
     sample_date: raw['sample_date'],
-    licence_number: raw['licence_number'] || '',
     category: 'Financial',
     jurisdiction_classification: raw['category'],
     confidence: 'HIGH',
