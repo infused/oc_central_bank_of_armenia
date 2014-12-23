@@ -3,7 +3,7 @@
   "title": "Central Bank of Armenia",
   "description": "Scape financial organizations for Central Bank of Armenia",
   "author": "Keith Morrison <keithm@infused.org>",
-  "repository": "https://github.com/infused/oc_central_bank_of_armenia",
+  "public_repository": "https://github.com/infused/oc_central_bank_of_armenia",
   "language": "ruby",
   "tags": ["bot", "Armenia", "world-finance-licences", "easy", "mapthebanks"],
   "data_type": "primary data",
