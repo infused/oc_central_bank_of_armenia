@@ -12,6 +12,8 @@ urls = {
   'Lombard' => 'https://www.cba.am/en/SitePages/fscfolombards.aspx',
 }
 
+tpins = []
+
 urls.each do |category, url|
   agent = Mechanize.new { |m| m.ssl_version, m.verify_mode = 'TLSv1', OpenSSL::SSL::VERIFY_NONE }
   page = agent.get(url)
@@ -30,6 +32,9 @@ urls.each do |category, url|
       sample_date: Time.now
     }
 
-    puts JSON.dump(data)
+    unless tpins.include?(data[:tpin])
+      tpins << data[:tpin]
+      puts JSON.dump(data)
+    end
   end
 end
