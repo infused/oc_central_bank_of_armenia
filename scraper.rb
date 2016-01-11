@@ -13,7 +13,7 @@ urls = {
 }
 
 urls.each do |category, url|
-  agent = Mechanize.new
+  agent = Mechanize.new { |m| m.ssl_version, m.verify_mode = 'TLSv1', OpenSSL::SSL::VERIFY_NONE }
   page = agent.get(url)
   page.search('.banks_list_cont .banks_list_desc').each do |bank|
     contact = bank.to_s.match(/<b>Contact:<\/b>([^<]*)/) ? $1.strip : nil
