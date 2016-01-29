@@ -9,14 +9,15 @@ urls = {
   'Credit Organization' => 'https://www.cba.am/en/SitePages/fscfocreditorganizations.aspx',
   'Insurance Organization' => 'https://www.cba.am/en/SitePages/fscfoinsuranceorganizations.aspx',
   'Insurance Broker' => 'https://www.cba.am/en/SitePages/fscfoinsurancebrokers.aspx',
-  'Lombard' => 'https://www.cba.am/en/SitePages/fscfolombards.aspx',
+  'Lombard' => 'https://www.cba.am/en/SitePages/fscfolombards.aspx'
 }
 
-tpins = []
+identifiers = []
 
 urls.each do |category, url|
   agent = Mechanize.new { |m| m.ssl_version, m.verify_mode = 'TLSv1', OpenSSL::SSL::VERIFY_NONE }
   page = agent.get(url)
+
   page.search('.banks_list_cont .banks_list_desc').each do |bank|
     contact = bank.to_s.match(/<b>Contact:<\/b>([^<]*)/) ? $1.strip : nil
 
@@ -32,8 +33,9 @@ urls.each do |category, url|
       sample_date: Time.now
     }
 
-    unless tpins.include?(data[:tpin])
-      tpins << data[:tpin]
+    identifier = data[:tpin] || data[:company_name]
+    unless identifiers.include?(identifier)
+      identifiers << identifier
       puts JSON.dump(data)
     end
   end
